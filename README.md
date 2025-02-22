@@ -59,3 +59,20 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+
+# Node Modules Fixes  
+- In case in accessing marketplace facing issue and finds that in reponse of API getting 500 Internal Server error apply below change in below file.
+ 
+ *File location:*
+ ```
+ node_modules/.strapi/vite/deps/MarketplacePage-CcAYozK2-VEVIE46X.js
+```
+
+*Function Name:*
+```
+useMarketplaceData
+```
+
+In above function Comment Lines which using *strapiVersion* variable, two locations will be there.
+After applying above change just restart application.
